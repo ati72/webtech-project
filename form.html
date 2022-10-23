@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form implementation</title>
+</head>
+
+<body>
+    <div class="container-screen-size form-container">
+        <p class="form-title">This is a form</p>
+        <form action="http://httpbin.org/post" method="post" target="_blank" id="submit-form">
+            <div class="input-area">
+                <label for="first-name">*First Name</label>
+                <input type="text" name="first-name" id="first-name" minlength="2" maxlength="30" required>
+            </div>
+            <div class="input-area">
+                <label for="last-name">*Last Name</label>
+                <input type="text" name="last-name" id="last-name" minlength="2" maxlength="30" required>
+            </div>
+            <div class="input-area">
+                <label for="email">*Email</label>
+                 <input type="email" name="email" id="email" required>
+            </div>
+            <div class="input-area">
+                <label for="password">*Password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="input-area">
+                <label for="message">Tell us your story:</label>
+                <textarea id="message" name="message" rows="5" cols="30" placeholder="Send us a message!" style="resize: none;"></textarea> 
+            </div>
+            <div class="input-area">
+                <label for="gender">Male</label>
+                <input type="radio" name="gender" id="female" value="male">
+                <label for="gender">Female</label>
+                <input type="radio" name="gender" id="female" value="female">
+            </div>
+            <div class="input-area">
+                <label for="color">Select your favorite color:</label>
+                <input type="color" id="color" name="color" value="#ff0000"> 
+            </div>
+            <div class="submit-area">
+                <button class="submit-button" type="submit" form="submit-form">Submit!</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

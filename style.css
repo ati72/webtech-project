@@ -50,7 +50,6 @@ a{
 }
 
 .welcome-left {
-    font-family: 'Monoton', cursive;
     text-align: center;
     font-size: 58px;
     border-right: 1px solid black;
@@ -109,4 +108,53 @@ a{
 
 .card.card3 {
     background-image: url(./images/card-pic-3.jpg);
+}
+
+/*FORM STYLES*/
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ 
+}
+
+#submit-form {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    padding: 20px;
+    height: 50%;
+    position: relative; /*hogy a gombot lehessen absolute-ba tenni*/
+}
+
+.form-title {
+    font-family: 'Monoton', cursive;
+    font-size: 58px;
+    padding: 24px;
+}
+
+.submit-button {
+    border: none;
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: rgb(86, 87, 190);
+    color: white;
+    font-size: 18px;
+}
+
+.submit-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid rgb(189, 178, 178)
 }
