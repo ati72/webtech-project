@@ -33,11 +33,17 @@
                 <label for="message">Tell us your story:</label>
                 <textarea id="message" name="message" rows="5" cols="30" placeholder="Send us a message!" style="resize: none;"></textarea> 
             </div>
-            <div class="input-area">
+            <div class="input-area gender">
+                <p style="padding-right: 20px;">*Gender:</p>
                 <label for="gender">Male</label>
-                <input type="radio" name="gender" id="female" value="male">
+                <input type="radio" name="gender" id="female" value="male" required>
                 <label for="gender">Female</label>
                 <input type="radio" name="gender" id="female" value="female">
+                
+            </div>
+            <div class="input-area">
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday"> 
             </div>
             <div class="input-area">
                 <label for="color">Select your favorite color:</label>

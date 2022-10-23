@@ -35,6 +35,7 @@ a{
     justify-content: center;
     align-items: center;
 }
+
 /*az aláhúzás miatt https://stackoverflow.com/questions/8572952/border-length-smaller-than-div-width*/
 .container-screen-size.welcome:before {
     content : "";
@@ -116,16 +117,27 @@ a{
     align-items: center;
     justify-content: center;
     flex-direction: column;
- 
 }
 
 #submit-form {
-    border: 1px solid black;
+    
     border-radius: 10px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; /*innen: https://getcssscan.com/css-box-shadow-examples*/
     padding: 20px;
-    height: 50%;
+    height: 70%;
+    width: 500px;
     position: relative; /*hogy a gombot lehessen absolute-ba tenni*/
+    font-size: 18px;
+}
+
+#submit-form > * {
+    padding: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.input-area>*:first-child {
+    margin-right: auto;
 }
 
 .form-title {
@@ -156,5 +168,27 @@ a{
 
 input {
     border-radius: 5px;
-    border: 1px solid rgb(189, 178, 178)
+    border: 1px solid rgb(189, 178, 178);
+    width: -webkit-fill-available;
+    height: 26px;
+}
+
+textarea {
+    width: -webkit-fill-available;
+    border: 1px solid rgb(189, 178, 178);
+    border-radius: 5px;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gender{
+    flex-direction: row;
+    justify-content: center;
+}
+.gender input {
+    display: block;
+    width: auto;
 }
