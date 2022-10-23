@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, p, h1{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    font-size: 28px;
+    text-decoration: none;
+    color: white;
+}
+
+
+.container-screen-size{
+    height: 100vh;
+    width: 100vw;  
+    background-color: rgb(190, 189, 86); 
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-screen-size.welcome{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*az aláhúzás miatt https://stackoverflow.com/questions/8572952/border-length-smaller-than-div-width*/
+.container-screen-size.welcome:before {
+    content : "";
+    position: absolute;
+    bottom  : 0;
+    height  : 1px;
+    width   : 50%;  /* or 100px */
+    border-bottom:1px solid black;
+  }
+
+.container-screen-size.welcome > * {
+    flex: 1; 
+}
+
+.welcome-left {
+    font-family: 'Monoton', cursive;
+    text-align: center;
+    font-size: 58px;
+    border-right: 1px solid black;
+}
+
+.welcome-left h1 {
+    font-family: 'Monoton', cursive;
+}
+
+
+
+.welcome-message {
+    font-size: 28px;
+}
+
+.container-screen-size.content {
+   padding: 50px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    height: 40%;
+    width: 80%;
+	text-align: center;
+}
+
+.card {
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card.card1 {
+    background-image: url(./images/card-pic-1.jpg);
+}
+
+.card.card2 {
+    background-image: url(./images/card-pic-2.jpg);
+}
+
+.card.card3 {
+    background-image: url(./images/card-pic-3.jpg);
+}
