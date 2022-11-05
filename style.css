@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
+:root.light {
+    --primary-bg-color: #e1e1e1;
+    --primary-text-color: #000000;
+}
+
+:root.dark {
+    --primary-bg-color: #171f24;
+    --primary-text-color: #e1e1e1;
+}
+
+
+
+
 * {
     box-sizing: border-box;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -9,6 +22,7 @@ body, p, h1{
     margin: 0;
     padding: 0;
     font-weight: normal;
+
 }
 
 a{
@@ -20,8 +34,9 @@ a{
 
 .container-screen-size{
     height: 100vh;
-    width: 100vw;  
-    background-color: rgb(190, 189, 86); 
+    width: 100vw;  /*ezt is kitörölhetném*/
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
 }
 
 .wrapper {
@@ -44,7 +59,7 @@ a{
     bottom  : 0;
     height  : 1px;
     width   : 50%;  /* or 100px */
-    border-bottom:1px solid black;
+    border-bottom:1px solid var(--primary-text-color);
   }
 
 .container-screen-size.welcome > * {
@@ -54,7 +69,7 @@ a{
 .welcome-left {
     text-align: center;
     font-size: 58px;
-    border-right: 1px solid black;
+    border-right: 1px solid var(--primary-text-color);
 }
 
 .welcome-left h1 {
@@ -116,6 +131,20 @@ a{
 
 .card.card3 {
     background-image: url(./images/card-pic-3.jpg);
+}
+
+.theme-button {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    border: 2px solid var(--primary-text-color);
+    padding: 10px 30px;
+    cursor: pointer;
+    box-shadow: 7px 5px var(--primary-text-color);
+    font-size: 15px;
+}
+
+.theme-button:hover {
+    text-decoration: underline;
 }
 
 /*FORM STYLES*/

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 
 <head>
     <meta charset="UTF-8">
@@ -13,6 +13,8 @@
     <div class="container-screen-size welcome">
         <div class="welcome-left">
             <h1>Hello.</h1>
+            <p style="font-size: 20px;">We are in <span class="theme-name">light</span> mode</p>
+            <button class="theme-button">Mode</button>
         </div>
         <div class="wrapper">
         <div class="welcome-right">
@@ -61,6 +63,18 @@
         </div>
     </div>
 
+
 </body>
+
+<script defer>
+    function setTheme() {
+        const root = document.documentElement;
+        const newTheme = root.className === 'dark' ? 'light' : 'dark';
+        root.className = newTheme;
+        document.querySelector('.theme-name').textContent = newTheme;
+    }
+    document.querySelector('.theme-button').addEventListener('click', setTheme);
+    
+</script>
 
 </html>
