@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root {
+    --primary-bg-color: #e1e1e1;
+    --primary-text-color: #383535;
+    --primary-font: 'Poppins'
+}
+
+*{
+    margin: 5px;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+}
+
+body {
+    background: var(--primary-bg-color);
+    text-align: center;
+    color: var(--primary-text-color);
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    height: 97vh;
+}
+
+header {
+    font-family: 'Zen Dots', cursive;
+    font-size: 62px;
+}
+
+.left {
+    padding: 0 0 3em 0;
+    flex: 1 1 100px;
+}
+
+main {
+    padding: 15px;
+    flex: 5 5 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1em;
+    place-items: center;
+}
+
+.right {
+    padding: 1em 0 3em 0;
+    flex: 1 1 100px;
+}
+
+footer {
+    padding: 1em 0 1em 0;
+    font-size: 12px;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+li {
+   padding: 1em 0 1em 0;
+   border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+}
+
+.container-box {
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container {
+    background-image: url(./images/card-pic-1.jpg);
+    height: 70%;
+    background-size: cover;
+    background-position: center;
+}
+
+.right-text {
+    text-align: justify;
+    font-size: 18px;
+}
+
+#counter-box, #checker-box, #random-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    width: 90px;
+    height: 26px;
+    border: 1px solid var(--primary-text-color);
+    border-radius: 2px;
+    box-shadow: 7px 5px var(--primary-text-color);
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: aliceblue;
+    text-decoration: underline;
+}
+
+@media all and (max-width: 550px) {
+    .main {
+        flex-direction: column;
+    }
+    main {
+        padding: 5em 0 5em 0;
+    }
+}
