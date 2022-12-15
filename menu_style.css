@@ -122,3 +122,13 @@ li:hover {
         padding: 5em 0 5em 0;
     }
 }
+
+@media  screen and (max-width: 1366px) {
+    .right-text {
+        font-size: 13px;
+    }
+
+    .image-container {
+        height: 60%;
+    }
+}
